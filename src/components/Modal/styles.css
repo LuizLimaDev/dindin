@@ -1,0 +1,61 @@
+@import '../../css/variaveis.css';
+
+.sombra__modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0, .6);
+}
+
+.container__modal {
+    width: 38,18rem;
+    height: 54.93rem;
+    padding: 4rem 3.25rem;
+    border-radius: 20px;
+
+    background-color: var(--cor-branco);
+}
+
+.container__titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 3rem;
+}
+
+.modal__nome{
+    width: 22.18rem;
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+}
+
+.modal__botaoFechar{
+    width: 1.66rem;
+    height: 2.2rem;
+    padding-top: .5rem
+}
+
+.container__botoes {
+    margin: 1rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menssagem__operacao{
+    color: var(--cor-verde);
+}

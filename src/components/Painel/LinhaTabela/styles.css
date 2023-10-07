@@ -1,0 +1,61 @@
+@import '../../../css/variaveis.css';
+
+.tabela__linha {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+        position: relative;
+
+    width: 60.25rem;
+    height: 3.75rem;
+    border-bottom: 1px solid var(--cor-borda-linhaTabela);
+}
+
+.tabela__linha {
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    text-align: center;
+
+    position: relative;
+
+}
+
+.tabela__coluna-data {
+    width: 6.37rem;
+    font-weight: 700;
+}
+
+.tabela__coluna-dia {
+    width: 4.89rem;
+}
+
+.tabela__coluna-descricao {
+    width: 14.18rem;
+}
+
+.tabela__coluna-categoria {
+    width: 6.56rem;
+}
+
+.tabela__coluna-valor {
+    width: 5.25rem;
+    font-weight: 700;
+}
+
+.entrada {
+    color: var(--cor-roxo);
+
+}
+
+.saida {
+    color: var(--cor-laranja);
+}
+
+.container__opcoes {
+    display: flex;
+    gap: .81rem;
+    
+    position: relative;
+    cursor: pointer;
+}

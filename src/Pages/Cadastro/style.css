@@ -1,0 +1,68 @@
+@import '../../css/variaveis.css';
+
+.background {
+    height: 100vh;
+    width: 100vw;
+
+    font-family: var(--fonte-primaria);
+
+    background-image: url(../../assets/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    height: 45px;
+    width: 169px;
+
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.cadastro-tela {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-formulario {
+    height: 781px;
+    width: 513px;
+
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-formulario-titulo {
+    color: var(--cor-roxo);
+    margin-top: 60px;
+    margin-bottom: 40;
+}
+
+.cadastro-tela button {
+    height: 49px;
+    width: 449px;
+
+    margin-top: 38px;
+}
+
+.erro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #df3c3c;
+
+    font-weight: bold;
+}
+
+.cadastro-formulario-link {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-roxo);
+    font-weight: 700;
+    text-decoration: none;
+
+    margin-top: 12px;
+}

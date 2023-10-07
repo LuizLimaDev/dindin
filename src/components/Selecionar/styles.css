@@ -1,0 +1,23 @@
+.container__selecionar{
+    display: flex;
+    flex-direction: column;
+}
+
+.select__etiqueta{
+    margin: 1.63rem 0 .5rem 0;
+
+    font-family: var(--fonte-primaria);
+    font-size: 1.25rem;
+    color: var(--cor-preto);
+}
+
+.formulario__selecionar {
+    width: 30.3125rem;
+    height: 3.96788rem;
+    padding-left: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: .5rem;
+
+    background-color: var(--cor-branco);
+}

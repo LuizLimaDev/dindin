@@ -1,0 +1,25 @@
+:root {
+    --cor-azulClaro: #3A9FF1;
+    --cor-roxo: #7978D9;
+    --cor-azulEscuro: #000A4A;
+    --cor-laranja: #FA8C10;
+    --cor-rosa: #FF57D3;
+    --cor-vermelha: #FF576B;
+    --cor-branco: #FFF;
+    --cor-preto: #484848;
+    --cor-cinza: #B9B9B9;
+    --cor-borda: #555;
+    --cor-verde: #539165;
+
+    --cor-resumo: #2F2F2F;
+
+    --cor-cabeecalhoTabela: #FAFAFA;
+    --cor-borda-linhaTabela: #E0E0E0;
+
+    --fonte-primaria: 'Rubik', sans-serif;
+    --fonte-secundaria: 'Lato', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}

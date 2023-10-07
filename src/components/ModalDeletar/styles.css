@@ -1,0 +1,77 @@
+.container-confirm{
+    width: 180px;
+    height: 80px;
+    background-color: #E4F2FD;
+    border-radius: 4px;
+
+    position: absolute;
+    z-index: 1;
+    top: 54px;
+    right: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-confirm span {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.container-buttons button {
+    height: 30px;
+}
+
+.container-buttons button:last-child {
+    margin-left: 6px;
+}
+
+.btn-extra-small {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+  
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    height: 38px;
+}
+
+.btn-blue {
+background-color: #3A9FF1;
+color: white;
+}
+
+.btn-red {
+background-color: #FF576B;
+color: white;
+}
+
+.arrow-up {
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    right: 8px;
+    width: 0;
+    height: 0;
+
+    border-left:  8px solid transparent;
+    border-right:  8px solid transparent;
+    border-bottom:  8px solid #E4F2FD;
+}

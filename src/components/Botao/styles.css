@@ -1,0 +1,38 @@
+@import '../../css/variaveis.css';
+
+.botao {
+    padding: .78rem 2.94rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2.37rem;
+
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: Rubik;
+    font-weight: 700;
+    color: var(--cor-branco);
+
+    background-color: var(--cor-roxo);
+}
+
+.cor__azul {
+    background-color: var(--cor-azulClaro);
+}
+
+.cor__cinza {
+    background-color: var(--cor-cinza);
+}
+
+.cor__vermelha {
+    background-color: var(--cor-vermelha);
+}
+
+.largo {
+    width: 15.6rem;
+    height: 3.5rem;
+}
+
+.resumo {
+    width: 14.75rem;
+    margin-top: 1rem;
+}

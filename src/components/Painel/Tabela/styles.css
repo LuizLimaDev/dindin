@@ -1,0 +1,38 @@
+.container__painel {
+    width: 60.25rem;
+}
+
+.tabela__cabecalho {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+
+    width: 60.25rem;
+    height: 3.625rem;
+    border-radius: 10px;
+    background: var(--cor-cabeecalhoTabela);
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.10);
+
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+}
+
+.cabecalho__item-data{
+    width: .5rem;
+}
+
+.cabecalho__item-dia {
+    width: 8rem; 
+}
+
+.cabecalho__item-descricao {
+    width: 7rem;
+}
+
+.cabecalho__item-categoria{
+    width: 3.5rem;
+}
+
+.cabecalho__item-valor{
+    width: 3.5rem;
+}

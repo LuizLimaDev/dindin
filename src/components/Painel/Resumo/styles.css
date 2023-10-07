@@ -1,0 +1,78 @@
+@import '../../../css/variaveis.css';
+
+.container__resumo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__resumo-bancario {
+    width: 14.75rem;
+    height: 11.25rem;
+    padding: 0 2rem;
+
+    border-radius: 10px;
+    background: var(--cor-cabeecalhoTabela);
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.10);
+}
+
+.resumo__titulo{
+    margin: 1.3rem 0 1.44rem;
+
+    font-size: 1.125rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    color: var(--cor-resumo);
+}
+
+.transacoes__entradas,
+.transacoes__saidas,
+.container__saldo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 1rem;
+}
+
+.transacoes__entradas,
+.transacoes__saidas{
+    margin-bottom: .75rem;
+}
+
+
+.transacoes__titulo,
+.transacoes__entradas-valor,
+.transacoes__saidas-valor,
+.saldo__valor{
+    color: var(--cor-resumo);
+    font-size: 0.8125rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+}
+
+.transacoes__entradas-valor {
+    color: var(--cor-roxo);
+}
+
+.transacoes__saidas-valor {
+    color: var(--cor-laranja);
+}
+
+.container__saldo{
+    border-top: 1px solid var(--cor-borda-linhaTabela);
+    padding: 1.5rem 0 0 0;
+}
+
+.positivo {
+    color: var(--cor-azulClaro);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.negativo {
+    color: var(--cor-laranja);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
