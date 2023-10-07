@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import filtrar from '../../../assets/filtrar.svg';
 import api from '../../../service/axios';
 import Resumo from '../Resumo/Resumo';
 import Tabela from '../Tabela/Tabela';
 import './styles.css';
+import Filtro from '../../Filtro';
 
 function Painel() {
     const [transacoes, setTransacoes] = useState([]);
@@ -49,19 +49,18 @@ function Painel() {
 
     return (
         <main className='principal'>
-            <button className='filtro'>
-                <img src={filtrar} alt='filtrar' />
-                Filtrar
-            </button>
-
-            <span className='erro'>{erroSistema}</span>
-
             <div className='container__informacoes'>
+            <span className='erro'>{erroSistema}</span>
+            <div>
+                <Filtro />
+
                 <Tabela
                     listarTransacoes={listarTransacoes}
                     resumoSaldo={resumoSaldo}
                     transacoes={transacoes}
                 />
+            </div>
+            
                 <Resumo
                     listarTransacoes={listarTransacoes}
                     resumoSaldo={resumoSaldo}

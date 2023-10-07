@@ -1,0 +1,78 @@
+.container-filtro {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    margin-bottom: 25px;
+}
+.botao-filtrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 32px;
+    border: none;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #000;
+    background-color: #FAFAFA
+}
+
+.botao-filtrar img {
+    margin-right: 4px;
+}
+
+.area-filtro {
+    width: 100%;
+
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: cente;
+    align-items: flex-start;
+    padding: 32px 32px 24px 32px;
+}
+
+.area-filtro strong {
+    margin-bottom: 24px;
+}
+
+.container-botoes {
+    display: flex;
+    gap: 16px;
+}
+
+.container-botoes button {
+    align-self: flex-end;
+
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, .3);
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    height: 24px;
+    padding: 12px 10px 25px 10px;
+    margin: 24px 16px 0 0;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.aplicar-filtro {
+    background-color: #7978D9;
+    color: #FFF;
+}
+
+.limpar-filtro {
+    background-color: #FAFAFA;
+    color: #000;
+}
