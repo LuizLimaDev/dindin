@@ -53,7 +53,7 @@ function Tabela({ listarTransacoes, resumoSaldo, transacoes, categoria }) {
                     <span className='cabecalho__space'></span>
                 </div>
 
-                {transacoes.map((transacao, index) => (
+                {transacoes.map(transacao => (
                     <LinhaTabela
                         dataFormatada={dataFormatada}
                         key={transacao.id}

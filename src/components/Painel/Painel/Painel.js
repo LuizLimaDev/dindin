@@ -6,12 +6,12 @@ import './styles.css';
 import Filtro from '../../Filtro';
 
 function Painel() {
+    const [transacoesRecebidas, setTransacoesRecebidas] = useState([]);
     const [transacoes, setTransacoes] = useState([]);
     const [entrada, setEntrada] = useState(0);
     const [saida, setSaida] = useState(0);
     const [resultado, setResultado] = useState(0);
     const token = localStorage.getItem('token');
-    const [erroSistema, setErroSistema] = useState('')
 
     useEffect(() => {
         listarTransacoes();
@@ -25,11 +25,15 @@ function Painel() {
                     Authorization: `${token}`
                 }
             });
-            setTransacoes(response.data);
+
+            setTransacoesRecebidas(response.data);
+            setTransacoes([...response.data])
+
         } catch (erro) {
-            setErroSistema('Erro inesperado detectado na TABELA, entre em contato com o suporte')
+            console.log(erro);
         }
     }
+
 
     async function resumoSaldo() {
         try {
@@ -43,24 +47,25 @@ function Painel() {
             setSaida(response.data.saida)
             setResultado(response.data.entrada - response.data.saida)
         } catch (erro) {
-            setErroSistema('Erro inesperado detectado no RESUMO, entre em contato com o suporte')
+            console.log(erro);
         }
     }
 
     return (
         <main className='principal'>
             <div className='container__informacoes'>
-            <span className='erro'>{erroSistema}</span>
-            <div>
-                <Filtro />
+                
+                <div className="container-left">
+                    <Filtro transacoes={transacoes} setTransacoes={setTransacoes} listarTransacoes={listarTransacoes}/>
 
-                <Tabela
-                    listarTransacoes={listarTransacoes}
-                    resumoSaldo={resumoSaldo}
-                    transacoes={transacoes}
-                />
-            </div>
+                    <Tabela
+                        listarTransacoes={listarTransacoes}
+                        resumoSaldo={resumoSaldo}
+                        transacoes={transacoes}
+                    />
+                </div>
             
+                <div className="container-right">
                 <Resumo
                     listarTransacoes={listarTransacoes}
                     resumoSaldo={resumoSaldo}
@@ -69,6 +74,7 @@ function Painel() {
                     saida={saida}
                     resultado={resultado}
                 />
+                </div>
             </div>
         </main>
     );

@@ -1,5 +1,5 @@
 .container__painel {
-    width: 60.25rem;
+    width: 100%;
 }
 
 .tabela__cabecalho {
@@ -7,7 +7,7 @@
     justify-content: space-around;  
     align-items: center;
 
-    width: 60.25rem;
+    width: 100%;
     height: 3.625rem;
     border-radius: 10px;
     background: var(--cor-cabeecalhoTabela);

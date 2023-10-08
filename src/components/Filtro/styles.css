@@ -1,12 +1,12 @@
-.container-filtro {
+.container__filtro {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
 
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
-.botao-filtrar{
+.botao__filtrar{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,11 +24,11 @@
     background-color: #FAFAFA
 }
 
-.botao-filtrar img {
+.botao__filtrar img {
     margin-right: 4px;
 }
 
-.area-filtro {
+.area__filtro {
     width: 100%;
 
     background-color: #FAFAFA;
@@ -42,16 +42,22 @@
     padding: 32px 32px 24px 32px;
 }
 
-.area-filtro strong {
+.area__filtro strong {
     margin-bottom: 24px;
 }
 
-.container-botoes {
+.container__etiquetas{
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.container__botoes {
     display: flex;
     gap: 16px;
 }
 
-.container-botoes button {
+.container__botoes button {
     align-self: flex-end;
 
     box-shadow: 0px 2px 11px rgba(0, 0, 0, .3);
@@ -67,12 +73,12 @@
     cursor: pointer;
 }
 
-.aplicar-filtro {
+.aplicar__filtro {
     background-color: #7978D9;
     color: #FFF;
 }
 
-.limpar-filtro {
+.limpar__filtro {
     background-color: #FAFAFA;
     color: #000;
 }

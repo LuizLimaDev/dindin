@@ -12,26 +12,16 @@
     background-color: var(--cor-branco);
 }
 
-.filtro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .25rem;
-
-    width: 5rem;
-    height: 1.875rem;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 1.62rem;
-    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.10);
-
-    font-family: var(--fonte-secundaria);
-    font-weight: 700;
-
-    background: var(--cor-cabeecalhoTabela);
-}
-
 .container__informacoes {
     display: flex;
+    justify-content: space-between;
     gap: 2.12rem;
+}
+
+.container-left {
+    width: 80%;
+}
+
+.container-right{
+    width: 20%;
 }

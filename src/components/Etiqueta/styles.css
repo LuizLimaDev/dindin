@@ -1,4 +1,4 @@
-.container-etiqueta {
+.container__etiqueta {
     background-color: #FAFAFA;
     box-shadow: 0px 2px 11px rgba(0, 0, 0, .1);
     border-radius: 10px;
@@ -13,7 +13,7 @@
     margin: 10px 10px 10px 0;
     cursor: pointer;
 }
-.container-etiqueta span {
+.container__etiqueta span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
