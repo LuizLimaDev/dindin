@@ -6,10 +6,7 @@ import "./styles.css";
 
 function Filtro({transacoes, setTransacoes, listarTransacoes}) {
     const [abrirFiltro, setAbrirFiltro ] = useState(false)
-    const [categorias, setCategorias] = useState([])
-
-    const [filtrosSelecionados, setFiltrosSelecionados] = useState([])
-    
+    const [categorias, setCategorias] = useState([])    
     const token = localStorage.getItem('token');
 
     useEffect(() => {

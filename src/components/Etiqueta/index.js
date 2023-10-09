@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react"
 import "./styles.css"
 
 function Etiqueta({
-    categoria,
     checked,
     titulo,
     id,
