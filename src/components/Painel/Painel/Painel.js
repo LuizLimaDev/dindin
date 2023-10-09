@@ -6,7 +6,6 @@ import './styles.css';
 import Filtro from '../../Filtro';
 
 function Painel() {
-    const [transacoesRecebidas, setTransacoesRecebidas] = useState([]);
     const [transacoes, setTransacoes] = useState([]);
     const [entrada, setEntrada] = useState(0);
     const [saida, setSaida] = useState(0);
@@ -26,14 +25,13 @@ function Painel() {
                 }
             });
 
-            setTransacoesRecebidas(response.data);
             setTransacoes([...response.data])
+            return response.data
 
         } catch (erro) {
             console.log(erro);
         }
     }
-
 
     async function resumoSaldo() {
         try {

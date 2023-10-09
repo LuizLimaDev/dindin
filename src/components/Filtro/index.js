@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react"
-import imagemFiltro from "../../assets/filtrar.svg"
-import "./styles.css"
-import Etiqueta from "../Etiqueta"
-import axios from "../../service/axios"
+import { useEffect, useState } from "react";
+import imagemFiltro from "../../assets/filtrar.svg";
+import axios from "../../service/axios";
+import Etiqueta from '../Etiqueta/index';
+import "./styles.css";
 
 function Filtro({transacoes, setTransacoes, listarTransacoes}) {
     const [abrirFiltro, setAbrirFiltro ] = useState(false)
     const [categorias, setCategorias] = useState([])
-    // const [categoriasSelecionadas, setCategoriasSelecionadas] = useState([])
-    const [limparFiltros, setLimparFiltros] = useState(false)
+
+    const [filtrosSelecionados, setFiltrosSelecionados] = useState([])
     
     const token = localStorage.getItem('token');
 
@@ -24,47 +24,49 @@ function Filtro({transacoes, setTransacoes, listarTransacoes}) {
                 const listaDeCategorias = response.data
                 listaDeCategorias.forEach(categoria => categoria.checked = false)
 
-                setCategorias(response.data)
+                setCategorias(listaDeCategorias)
             }
-            buscaCategorias();
+
+            if (abrirFiltro) {
+                buscaCategorias();
+            }
 
         } catch (erro) {
             console.log(erro);
         }
     }, [abrirFiltro])
 
-
     async function limpezaDeFiltros() {
-        setLimparFiltros(true)
-       
-        await listarTransacoes()
+        const categoriasCarregadas = [...categorias]
+
+        categoriasCarregadas.forEach(categoria => categoria.checked = false)
+
+        setCategorias([...categoriasCarregadas])
+        listarTransacoes()
     }
 
     async  function aplicarFiltros(){
-        let categoriasSelecionadas = [];
+        const transacoesAdicionadas = await listarTransacoes()
+        setTransacoes([...transacoesAdicionadas])
 
+        const categoriasSelecionadas = []
+        
         categorias.forEach(categoria => {
-            if(categoria.checked) {
+            if (categoria.checked) {
                 categoriasSelecionadas.push(categoria.descricao)
-            } 
+            }
         })
 
-        if(!categoriasSelecionadas.length) {
-            await listarTransacoes()
+        if (!categoriasSelecionadas.length) {
+            listarTransacoes()
             return
         }
 
-        const transacoesSeleciodadas = transacoes.filter(
-            transacao => categoriasSelecionadas.includes(transacao.categoria_nome)
+        const transacoesFiltradas = transacoesAdicionadas.filter(
+            transacoes => categoriasSelecionadas.includes(transacoes.categoria_nome)
         )
-
-        setTransacoes([...transacoesSeleciodadas])
-
-        console.log(
-            "categoria : ", categoriasSelecionadas,
-            "transacao: ", transacoesSeleciodadas,
-            "transacoes: ", transacoes
-            );
+        
+        setTransacoes([...transacoesFiltradas]);
     }
 
     return (
@@ -82,18 +84,15 @@ function Filtro({transacoes, setTransacoes, listarTransacoes}) {
         <div className="area__filtro">
             <strong>Categoria</strong>
 
-
             <div className="container__etiquetas">
                 {categorias.map((categoria) => (
                     <Etiqueta 
-                    key={categoria.id} 
-                    categoria={categoria}
-                    titulo={categoria.descricao} 
-                    categorias={categorias}
-                    // setCategoriasSelecionadas={setCategoriasSelecionadas}
-                    // categoriasSelecionadas={categoriasSelecionadas}
-                    limparFiltros={limparFiltros}
-                    setLimparFiltros={setLimparFiltros}
+                        key={categoria.id}
+                        checked={categoria.checked}
+                        titulo={categoria.descricao}
+                        id={categoria.id}
+                        categorias={categorias}
+                        setCategorias={setCategorias}
                     />
                 ))}
             </div>

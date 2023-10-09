@@ -52,6 +52,37 @@
     flex-wrap: wrap;
 }
 
+.container__etiqueta {
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    font-size: 12px;
+    width: 90px;
+    height: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 2px;
+    margin: 10px 10px 10px 0;
+    cursor: pointer;
+}
+.container__etiqueta span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clicado {
+    background-color: #7978D9;
+    color: #FFF;
+}
+
+.normal {
+    background-color: #FAFAFA;
+    color: #000;
+}
+
 .container__botoes {
     display: flex;
     gap: 16px;
