@@ -1,14 +1,14 @@
 <h1 align="center"> 💵 Din Din </h1>
 
 <p align="center"> 
-Aplicativo de gerenciamento financeiro, podendo coontrolar entradas e saídas financeiras, filtrar as transações e visualizar o resumo destas operações.
+Aplicativo de gerenciamento financeiro quer permite controlar entradas e saídas financeiras, filtrar as transações e visualizar o resumo destas operações.
 </p>
 
 <div align="center">
-<img src="https://i.imgur.com/BjPieVp.png" width="800" height="600">
+<img src="https://i.imgur.com/BjPieVp.png" width="600" height="400">
 </div>
 
----
+<br><br>
 
 <h1 align="center">
   📃 Descrição do projeto 
@@ -16,10 +16,11 @@ Aplicativo de gerenciamento financeiro, podendo coontrolar entradas e saídas fi
 
 <p align="center"> 
 Projeto desenvolvido na formação de Fullstack pela Cubos Academy em dupla.
-Além do objetivo de consolidar os conhecimentos em React, também foi necessário aprender e desempenhar as Softskills para fazer o Pair Programming (programação em dupla), para simular situações reais de trabalho.
+Além do objetivo de consolidar os conhecimentos em React, também foi necessário aprender e desempenhar as Softskills para fazer o <b>Pair Programming</b> (programação em dupla), para simular situações reais de trabalho.
 </p>
 
-<br><br>
+Aplicativo Desktop: 1440px
+<br>
 
 <p> Funcionalidades: </p>
 
@@ -30,13 +31,20 @@ Além do objetivo de consolidar os conhecimentos em React, também foi necessár
   <li>Filtrar transações por categorias</li>
 </ul>
 
----
+<br><br>
 
 <h1 align="center">
-💻 Tecnologias 
+💻 Tecnologia
 </h1>
 
----
+<div align="center">
+  
+![My Skills](https://skillicons.dev/icons?i=react)
+
+</div>
+
+<br>
+
 <h3 align="center"> Se você curtiu o projeto, não deixe de marcar uma :star:<br><br>
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/luizlimadev)](https://github.com/luizlimadev)
